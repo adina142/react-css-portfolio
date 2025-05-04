@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+:root {
+  --primary-color: #444;
+  --mobile-breakpoint: 768px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+/* Home Page Styles */
+.home-container {
+  padding: 2rem;
+  margin-left: 240px; /* Adjust this to match the width of your Sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #f0f0f0; /* Background color for the container */
+  opacity: 0; /* Start with invisible background */
+  animation: fadeIn 2s ease-in-out 2s forwards; /* 2s delay, 2s duration, keep the final state */
+}
+
+/* Keyframes for background fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Home Page Styles */
+.home-container {
+  padding: 2rem;
+  margin-left: 240px; /* Adjust this to match the width of your Sidebar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #f0f0f0; /* Ensure background color is set */
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 2s ease-in-out 2s forwards; /* Fade-in effect after 2 seconds */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.profile-picture {
+  width: 400px !important;  /* Make it large */
+  height: 400px !important; /* Make it large */
+  margin-bottom: 1rem;
+  border-radius: 50%; /* Make it round */
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* Hover effect to enlarge and add shadow */
+.profile-picture:hover {
+  transform: scale(1.1); /* Enlarge image by 10% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for a floating effect */
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.25rem;
+}
+/* Add scrolling animation for the text */
+/* Add scrolling animation for the text */
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap; /* Prevent wrapping of text */
+  animation: scrollText 30s linear infinite; /* Infinite scroll effect */
+  padding-right: 100%; /* Ensure there's extra space on the right for the text to start off-screen */
+  font-family: 'Roboto', sans-serif; /* Use the desired font */
+  font-size: 1.25rem; /* Adjust font size */
+  font-weight: 400; /* Adjust font weight */
+  font-style: italic; /* Make the font italic */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%); /* Start from right side */
+  }
+  50% {
+    transform: translateX(0); /* Text reaches the center */
+  }
+  100% {
+    transform: translateX(-100%); /* Text moves off to the left */
+  }
+}
+
+/* index.css */
+
+/* Custom style for AppBar */
+.header-bar {
+  background-color: black !important;
+}
+
+.MuiDrawer-paper {
+  position: fixed; /* Ensure it's positioned over content */
+  z-index: 1200; /* Ensure it appears above the main content */
+}
+
+.MuiIconButton-root {
+  z-index: 1300; /* Ensure hamburger icon stays above drawer */
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1976d2;
+  text-align: center;
+  padding: 10px;
+  z-index: 9999;  /* Ensures the footer is on top */
+}
+
+.footer-text {
+  color: white;
+  font-size: 0.9rem;
+}
+body {
+  padding-bottom: 50px; /* Add sufficient bottom padding to accommodate the footer */
+}
+
+/* Optional styles for the sidebar text */
+.MuiTypography-root {
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}

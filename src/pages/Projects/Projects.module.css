@@ -1,0 +1,55 @@
+.container {
+    padding: 2rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* Limit width to avoid stretching behind sidebar */
+  }
+  
+  .pageTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures cards fill the grid item */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .cardContent h6 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cardContent p,
+  .cardContent .MuiTypography-body2 {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Optional - Add min-height for images */
+  .cardMedia {
+    min-height: 200px;
+    object-fit: cover;
+  }
+  

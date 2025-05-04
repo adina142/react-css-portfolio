@@ -1,0 +1,25 @@
+.container {
+    padding-top: 3rem;         /* Push form downward a little */
+    padding-left: 260px;       /* Adjust for sidebar width */
+    padding-right: 2rem;
+    box-sizing: border-box;
+  }
+  
+  .pageTitle {
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 900px;          /* Long horizontal form */
+  }
+  
+  .formGroup {
+    margin-bottom: 1rem;
+  }
+  .boldItalic {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
