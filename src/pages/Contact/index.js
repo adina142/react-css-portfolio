@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
-import { Typography, TextField, Button, Box, Container } from '@mui/material';
+import { 
+  Typography, 
+  TextField, 
+  Button, 
+  Container
+} from '@mui/material';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
-import ContactMailIcon from '@mui/icons-material/ContactMail';
-import PersonIcon from '@mui/icons-material/Person';
-import EmailIcon from '@mui/icons-material/Email';
-import MessageIcon from '@mui/icons-material/Message';
+import {
+  ContactMail as ContactMailIcon,
+  Person as PersonIcon,
+  Email as EmailIcon,
+  Message as MessageIcon
+} from '@mui/icons-material';
 import InputAdornment from '@mui/material/InputAdornment';
-
 import styles from './Contact.module.css';
 
 const validationSchema = Yup.object({
@@ -26,89 +32,100 @@ const Contact = () => {
   };
 
   return (
-    <Container className={styles.container} maxWidth="md"> {/* Wider layout */}
-    <Typography variant="h4" className={styles.pageTitle}>
-  <ContactMailIcon style={{ verticalAlign: 'middle', marginRight: '0.5rem' }} />
-  <span className={styles.boldItalic}>Contact</span>
-</Typography>
-
+    <Container maxWidth="md" className={styles.container}>
+      <Typography variant="h4" className={styles.pageTitle}>
+        <ContactMailIcon className={styles.titleIcon} />
+        Contact Me
+      </Typography>
 
       <Formik
         initialValues={{ name: '', email: '', message: '' }}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
-        {({ values, handleChange, handleSubmit, errors }) => (
+        {({ values, handleChange, handleSubmit, errors, touched }) => (
           <form onSubmit={handleSubmit} className={styles.form}>
-            <Box className={styles.formGroup}>
-            <TextField
-  label="Name"
-  name="name"
-  value={values.name}
-  onChange={handleChange}
-  fullWidth
-  error={Boolean(errors.name)}
-  helperText={errors.name}
-  variant="outlined"
-  InputProps={{
-    startAdornment: (
-      <InputAdornment position="start">
-        <PersonIcon />
-      </InputAdornment>
-    ),
-  }}
-/>
-            </Box>
-            <Box className={styles.formGroup}>
-            <TextField
-  label="Email"
-  name="email"
-  type="email"
-  value={values.email}
-  onChange={handleChange}
-  fullWidth
-  error={Boolean(errors.email)}
-  helperText={errors.email}
-  variant="outlined"
-  InputProps={{
-    startAdornment: (
-      <InputAdornment position="start">
-        <EmailIcon />
-      </InputAdornment>
-    ),
-  }}
-/>
+            <div className={styles.formGroup}>
+              <TextField
+                label="Name"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+                fullWidth
+                error={touched.name && Boolean(errors.name)}
+                helperText={touched.name && errors.name}
+                variant="outlined"
+                className={styles.textField}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PersonIcon className={styles.inputIcon} />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </div>
 
-            </Box>
-            <Box className={styles.formGroup}>
-            <TextField
-  label="Message"
-  name="message"
-  value={values.message}
-  onChange={handleChange}
-  fullWidth
-  multiline
-  rows={4}
-  error={Boolean(errors.message)}
-  helperText={errors.message}
-  variant="outlined"
-  InputProps={{
-    startAdornment: (
-      <InputAdornment position="start">
-        <MessageIcon />
-      </InputAdornment>
-    ),
-  }}
-/>
+            <div className={styles.formGroup}>
+              <TextField
+                label="Email"
+                name="email"
+                type="email"
+                value={values.email}
+                onChange={handleChange}
+                fullWidth
+                error={touched.email && Boolean(errors.email)}
+                helperText={touched.email && errors.email}
+                variant="outlined"
+                className={styles.textField}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <EmailIcon className={styles.inputIcon} />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </div>
 
-            </Box>
-            <Box className={styles.formGroup}>
-            <Button type="submit" variant="contained" color="error">
-                 Submit
-            </Button>
+            <div className={styles.formGroup}>
+              <TextField
+                label="Message"
+                name="message"
+                value={values.message}
+                onChange={handleChange}
+                fullWidth
+                multiline
+                rows={4}
+                className={`${styles.textField} ${styles.messageField}`}
+                error={touched.message && Boolean(errors.message)}
+                helperText={touched.message && errors.message}
+                variant="outlined"
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <MessageIcon className={styles.inputIcon} />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </div>
 
-            </Box>
-            {formStatus && <Typography variant="body1" align="center" color="green">{formStatus}</Typography>}
+            <div className={styles.formGroup}>
+              <Button 
+                type="submit" 
+                variant="contained" 
+                className={styles.submitButton}
+              >
+                Submit
+              </Button>
+            </div>
+
+            {formStatus && (
+              <Typography variant="body1" className={styles.successMessage}>
+                {formStatus}
+              </Typography>
+            )}
           </form>
         )}
       </Formik>
