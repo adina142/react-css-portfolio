@@ -1,10 +1,21 @@
 import React, { useState } from 'react';
 import { usePageTitle } from '../../context/PageTitleContext';
-import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, Avatar, Box } from '@mui/material';
+import { 
+  AppBar, 
+  Toolbar, 
+  Typography, 
+  IconButton, 
+  Menu, 
+  MenuItem, 
+  Avatar, 
+  Box,
+  Divider
+} from '@mui/material';
+import { Logout, Settings, AccountCircle } from '@mui/icons-material';
 
 
 const Header = () => {
-  const { title } = usePageTitle(); // Ensure that your context provides `title`
+  const { title } = usePageTitle();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -24,23 +35,44 @@ const Header = () => {
 
   return (
     <AppBar position="sticky" className="header-bar">
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <Typography variant="h6" component="div">
+      <Toolbar className="header-toolbar">
+        <Typography variant="h6" component="div" className="header-title">
           {title}
         </Typography>
 
         <Box>
-          <IconButton onClick={handleMenuOpen} color="inherit">
-            <Avatar alt="Profile" src="/assests/profile.png" />
+          <IconButton onClick={handleMenuOpen} color="inherit" size="large">
+            <Avatar 
+              alt="Profile" 
+              src="/assests/profile.png" 
+              className="profile-avatar"
+            />
           </IconButton>
+          
           <Menu
+            className="profile-menu"
             anchorEl={anchorEl}
             open={open}
             onClose={handleMenuClose}
             anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
             transformOrigin={{ vertical: 'top', horizontal: 'right' }}
           >
-            <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            <MenuItem onClick={handleMenuClose} className="profile-item">
+              <AccountCircle sx={{ marginRight: 1.5, color: 'inherit' }} />
+              Profile
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose} className="profile-item">
+              <Settings sx={{ marginRight: 1.5, color: 'inherit' }} />
+              Settings
+            </MenuItem>
+            <Divider />
+            <MenuItem 
+              onClick={handleLogout} 
+              className="logout-item"
+            >
+              <Logout sx={{ marginRight: 1.5, color: 'inherit' }} />
+              Logout
+            </MenuItem>
           </Menu>
         </Box>
       </Toolbar>
