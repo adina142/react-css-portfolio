@@ -1,0 +1,80 @@
+.skillsContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    position: relative;
+  }
+  
+  .sectionTitle::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-main), var(--secondary-main));
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+  
+  .skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .skillItem {
+    margin-bottom: 1rem;
+  }
+  
+  .skillHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skillName {
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .skillPercentage {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  
+  /* Animation for progress bars */
+  @keyframes progressAnimation {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  
+  .progressBar {
+    transform-origin: left;
+    animation: progressAnimation 1.5s ease-out forwards;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .skillsContainer {
+      padding: 1.5rem;
+    }
+    
+    .skillsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sectionTitle {
+      font-size: 1.75rem;
+    }
+  }
