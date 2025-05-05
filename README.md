@@ -87,11 +87,19 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 
 
 - **MainSection**
-- Home
+
 
 ![image](https://github.com/user-attachments/assets/26323c42-fbb1-40f5-afbe-31f9c7629f4b)
 
-  - 
+ **Education Section** 
+
+![image](https://github.com/user-attachments/assets/f28059c4-9911-4693-9826-226d5eadaba3)
+
+
+**Contact Form** with Yup validation
+
+![image](https://github.com/user-attachments/assets/d33e31ce-83aa-490a-8d42-e0be309a9219)
+
 
 
 ---
