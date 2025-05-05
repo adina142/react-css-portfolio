@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { usePageTitle } from '../../context/PageTitleContext';
-import { Typography, Card, CardContent, CardMedia, Button } from '@mui/material';
+import { Typography, Card, CardContent, CardMedia, Button, Box } from '@mui/material';
 import styles from './Projects.module.css';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 
 const Projects = () => {
   const { setPageTitle } = usePageTitle();
+  
 
   useEffect(() => {
     setPageTitle('Projects - My Portfolio');
@@ -40,24 +41,19 @@ const Projects = () => {
       links: [
         { icon: <GitHubIcon />, url: "#" }
       ]
-    },
-    {
-      title: "Distributed Backup System",
-      description: "Designed and implemented a fault-tolerant database backup system across multiple nodes in a distributed computing environment.",
-      image: "assests/db.png",
-      tags: ["Java", "Distributed Systems"],
-      links: [
-        { icon: <GitHubIcon />, url: "#" }
-      ]
     }
   ];
 
   return (
-    <div className={styles.container}>
+    <Box className={styles.container} sx={{ ml: { xs: 0, sm: '280px' }, p: 3 }}>
       <Typography variant="h4" className={styles.pageTitle}>My Projects</Typography>
-      <div className={styles.gridWrapper}>
+      <Box className={styles.gridWrapper}>
         {projects.map((project, index) => (
-          <Card key={index} className={styles.card}>
+          <Card key={index} className={styles.card} sx={{ 
+            width: '100%',
+            maxWidth: '400px',
+            mx: 'auto'
+          }}>
             <CardMedia
               component="img"
               height="200"
@@ -66,25 +62,20 @@ const Projects = () => {
               className={styles.cardMedia}
             />
             <CardContent className={styles.cardContent}>
-              <Typography variant="h6">{project.title}</Typography>
+              <Typography variant="h6" gutterBottom>
+                {project.title}
+              </Typography>
               <Typography variant="body2" paragraph>
                 {project.description}
               </Typography>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '1rem' }}>
+              <Box className={styles.tagsContainer}>
                 {project.tags.map((tag, i) => (
-                  <span key={i} style={{
-                    backgroundColor: '#f0e6dd',
-                    color: '#6d4c41',
-                    padding: '4px 8px',
-                    borderRadius: '4px',
-                    fontSize: '0.75rem',
-                    fontWeight: '500'
-                  }}>
+                  <Box key={i} className={styles.tag}>
                     {tag}
-                  </span>
+                  </Box>
                 ))}
-              </div>
-              <div style={{ display: 'flex', gap: '8px' }}>
+              </Box>
+              <Box className={styles.linksContainer}>
                 {project.links.map((link, i) => (
                   <Button
                     key={i}
@@ -94,24 +85,17 @@ const Projects = () => {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    sx={{
-                      color: '#6d4c41',
-                      borderColor: '#d2b48c',
-                      '&:hover': {
-                        backgroundColor: 'rgba(210, 180, 140, 0.1)',
-                        borderColor: '#a9745f'
-                      }
-                    }}
+                    className={styles.projectButton}
                   >
                     {link.icon.type === GitHubIcon ? 'Code' : 'Demo'}
                   </Button>
                 ))}
-              </div>
+              </Box>
             </CardContent>
           </Card>
         ))}
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 
