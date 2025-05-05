@@ -27,7 +27,7 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 - Timeline-style education history
 - Institution details and dates
 
----
+
 ## 💼 Skills
 - ✅ JavaScript (ES6+)
 - ✅ React.js & Hooks
@@ -39,7 +39,7 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 - ✅ Form Handling & Validation (Formik + Yup)
 - ✅ REST API Integration
 - ✅ CSS Flexbox & Grid
-
+---
 ## ⚙️ Technical Highlights
 - **React Context API** for global state management
 - Dynamic page titles
@@ -59,24 +59,7 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 - 
 
 ---
-### react-css-portfolio/
-├── public/
-├── src/
-│   ├── assets/               # Images and static files
-│   ├── components/           # Reusable UI components
-│   │   ├── Header/
-│   │   ├── SideNav/
-│   │   ├── Footer/
-│   │   └── ProjectCard/
-│   ├── context/              # Context providers
-│   ├── pages/                # Page components
-│   │   ├── Home/
-│   │   ├── Projects/
-│   │   ├── Education/
-│   │   └── Contact/
-│   ├── App.js                # Main app component
-│   ├── index.js              # Entry point
-│   └── index.css             # Global styles
+
 ├── .gitignore
 └── README.md
 
