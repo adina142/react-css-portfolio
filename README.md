@@ -101,5 +101,21 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 ![image](https://github.com/user-attachments/assets/d33e31ce-83aa-490a-8d42-e0be309a9219)
 
 
+**Project Section** with hover effects
+
+![image](https://github.com/user-attachments/assets/4152818c-fa02-4e11-9ed6-346921a3095e)
+
+
+**Skills Section** with hover effects
+
+![image](https://github.com/user-attachments/assets/9ffdf38f-ef41-4e8d-947b-62edf6da7cf4)
+
+
+
+#### . Live Demo
+
+https://vercel.com/adina142s-projects/react-css-portfolio/4Lgn8CmcTLixQRBKwzCSQFFrPotJ
+
+
 
 ---
