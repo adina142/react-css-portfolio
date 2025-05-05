@@ -1,21 +1,25 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
+
 const Footer = () => {
   return (
-    <Box
+    <Box 
+      component="footer" 
+      className="footer-container"
       sx={{
         position: 'fixed',
         bottom: 0,
-        width: '100%',
-        backgroundColor: '#1976d2',
-        textAlign: 'center',
-        padding: '10px',
-        zIndex: 1300, // Keeps it above other components if necessary
+        left: 0,
+        right: 0,
+        py: 2,
+        bgcolor: 'primary.main',
+        color: 'white',
+        zIndex: (theme) => theme.zIndex.drawer + 1
       }}
     >
-      <Typography variant="body2" sx={{ color: 'white', fontSize: '0.9rem' }}>
-        © {new Date().getFullYear()} Your Portfolio
+      <Typography variant="body2">
+        © {new Date().getFullYear()} AdinaKhalid - All Rights Reserved
       </Typography>
     </Box>
   );
