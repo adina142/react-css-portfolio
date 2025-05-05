@@ -78,7 +78,20 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
   - Reusable **Project Card** component with CSS hover effects
   - **Contact Form** with Yup validation
   - **Education Section** using MUI components
-- **Footer**
+  - - **Footer**
   - Fixed MUI `Box` component with copyright
+ 
+
+
+
+
+
+- **MainSection**
+- Home
+
+![image](https://github.com/user-attachments/assets/26323c42-fbb1-40f5-afbe-31f9c7629f4b)
+
+  - 
+
 
 ---
