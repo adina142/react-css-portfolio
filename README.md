@@ -1,4 +1,4 @@
- React CSS Portfolio
+# React CSS Portfolio
 
 A modern, responsive portfolio built with **React** and **Material-UI (MUI)** following a component-based architecture and React 18+ best practices.
 
@@ -27,6 +27,7 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 - Timeline-style education history
 - Institution details and dates
 
+---
 
 ## 💼 Skills
 - ✅ JavaScript (ES6+)
@@ -39,7 +40,9 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 - ✅ Form Handling & Validation (Formik + Yup)
 - ✅ REST API Integration
 - ✅ CSS Flexbox & Grid
+
 ---
+
 ## ⚙️ Technical Highlights
 - **React Context API** for global state management
 - Dynamic page titles
@@ -56,10 +59,26 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 - React Router
 - Yup
 - CSS3
-- 
 
 ---
 
-├── .gitignore
-└── README.md
+### 📐 Core Requirements:
 
+#### 1. Layout Components
+- **Header**
+  - MUI `AppBar` with profile avatar (right side)
+  - MUI `Menu` for dropdown (logout placeholder)
+- **SideNav**
+  - MUI `Drawer` with collapsible navigation (mobile/desktop)
+  - Visible on desktop, hidden on mobile
+  - Links: Home, Education, Projects, Contact
+- **MainSection**
+  - Dynamic `Page Title Context`
+  - Routed components
+  - Reusable **Project Card** component with CSS hover effects
+  - **Contact Form** with Yup validation
+  - **Education Section** using MUI components
+- **Footer**
+  - Fixed MUI `Box` component with copyright
+
+---
