@@ -1,57 +1,170 @@
 .container {
-    padding: 3rem; /* Increase padding */
-    margin-left: 240px; /* Adjust this to match the width of your Sidebar */
-    text-align: center;
+  padding: 2rem;
+  margin-left: 240px;
+  transition: all 0.3s ease;
+}
+
+.pageTitle {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #2c3e50;
+}
+
+.pageTitle strong {
+  font-weight: 700;
+}
+
+.titleIcon {
+  font-size: 2rem;
+  color: #3498db;
+}
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.educationTable {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.educationTable th, 
+.educationTable td {
+  padding: 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.educationTable th {
+  background-color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.educationTable tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+.educationTable tr:hover {
+  background-color: #444;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.websiteLink {
+  color: #90caf9 !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.websiteLink:hover {
+  color: #64b5f6 !important;
+  text-decoration: underline;
+}
+
+/* Mobile Cards */
+.mobileCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.educationCard {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.institution {
+  margin: 0;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardDetails p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .container {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
   }
   
   .pageTitle {
-    margin-bottom: 3rem; /* Increase margin-bottom for spacing */
-    font-size: 3rem; /* Increase font size of the title */
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
   
-  .pageTitle strong {
-    font-weight: bold;
-    font-style: italic;
+  .titleIcon {
+    font-size: 1.8rem;
   }
   
-  .pageTitle svg {
-    font-size: 3rem; /* Make the icon larger */
-    color: #444; /* Change the color of the icon */
+  .educationTable th, 
+  .educationTable td {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
   }
   
-  .tableContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem; /* Increase margin-top */
+  .pageTitle {
+    font-size: 1.5rem;
   }
   
-  .educationTable {
-    width: 90%; /* Increase width to take up more space */
-    border-collapse: collapse;
-    margin: 0 auto;
-    font-size: 1.2rem; /* Increase font size for readability */
-    background-color: #1a1a1a; /* Dark background color */
-    color: white; /* White text color */
-    border-radius: 10px; /* Optional: Rounded corners */
+  .titleIcon {
+    font-size: 1.5rem;
   }
   
-  .educationTable th, .educationTable td {
-    padding: 16px; /* Increase padding for larger cells */
-    text-align: left;
-    border-bottom: 1px solid #444; /* Light black border */
+  .educationCard {
+    padding: 1.2rem;
   }
   
-  .educationTable th {
-    background-color: #333; /* Darker black for header */
-    font-size: 1.4rem; /* Increase font size for header */
+  .logo {
+    height: 35px;
+    width: 35px;
   }
-  
-  .educationTable tr:nth-child(even) {
-    background-color: #2c2c2c; /* Light black for even rows */
-  }
-  
-  .educationTable tr:hover {
-    background-color: #444; /* Hover effect */
-  }
-  
+}
