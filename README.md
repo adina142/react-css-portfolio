@@ -115,7 +115,43 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 
 
 #### . Live Demo
+
 https://react-css-portfolio-b2beai6ap-adina142s-projects.vercel.app/
+
+#### Mobile Responsive 
+![image](https://github.com/user-attachments/assets/138caeaf-0c14-45bd-95f8-9215d272d55d)
+
+**Side Bar**
+
+![image](https://github.com/user-attachments/assets/cfd1607a-64d1-4963-bd68-9f1e52671fb7)
+
+**Education**
+
+![image](https://github.com/user-attachments/assets/64246cd5-38fb-457c-9aa1-398fd0754103)
+
+**Contact**
+
+![image](https://github.com/user-attachments/assets/2a105d08-5fd6-4b61-9c6b-9b8cfab262a1)
+
+**Projects**
+
+![image](https://github.com/user-attachments/assets/a8c35216-9536-4164-ab49-d1274928da9d)
+![image](https://github.com/user-attachments/assets/7a926138-43dc-4b03-8761-b6027e126f02)
+
+**Logout**
+![image](https://github.com/user-attachments/assets/828caa29-2e9c-4b00-8636-87e32b0c0210)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ---
