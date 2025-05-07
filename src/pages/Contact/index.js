@@ -3,7 +3,8 @@ import {
   Typography, 
   TextField, 
   Button, 
-  Container
+  Container,
+  Box
 } from '@mui/material';
 import * as Yup from 'yup';
 import { Formik } from 'formik';
@@ -33,10 +34,15 @@ const Contact = () => {
 
   return (
     <Container maxWidth="md" className={styles.container}>
-      <Typography variant="h4" className={styles.pageTitle}>
-        <ContactMailIcon className={styles.titleIcon} />
-        Contact Me
-      </Typography>
+      <Box className={styles.headerBox}>
+        <Typography variant="h4" className={styles.pageTitle}>
+          <ContactMailIcon className={styles.titleIcon} />
+          Contact Me
+        </Typography>
+        <Typography variant="subtitle1" className={styles.pageSubtitle}>
+          Have questions or want to work together? Send me a message!
+        </Typography>
+      </Box>
 
       <Formik
         initialValues={{ name: '', email: '', message: '' }}
@@ -96,7 +102,7 @@ const Contact = () => {
                 onChange={handleChange}
                 fullWidth
                 multiline
-                rows={4}
+                rows={6}
                 className={`${styles.textField} ${styles.messageField}`}
                 error={touched.message && Boolean(errors.message)}
                 helperText={touched.message && errors.message}
@@ -116,8 +122,9 @@ const Contact = () => {
                 type="submit" 
                 variant="contained" 
                 className={styles.submitButton}
+                size="large"
               >
-                Submit
+                Send Message
               </Button>
             </div>
 
