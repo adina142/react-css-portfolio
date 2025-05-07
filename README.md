@@ -93,12 +93,14 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 
  **Education Section** 
 
-![image](https://github.com/user-attachments/assets/f28059c4-9911-4693-9826-226d5eadaba3)
+![image](https://github.com/user-attachments/assets/b8300c93-8bed-447f-9cb3-be6dc2c3882d)
+
 
 
 **Contact Form** with Yup validation
 
-![image](https://github.com/user-attachments/assets/d33e31ce-83aa-490a-8d42-e0be309a9219)
+![image](https://github.com/user-attachments/assets/258b55f3-250a-4833-8cde-23915c04f784)
+
 
 
 **Project Section** with hover effects
@@ -113,9 +115,7 @@ A modern, responsive portfolio built with **React** and **Material-UI (MUI)** fo
 
 
 #### . Live Demo
-
-https://vercel.com/adina142s-projects/react-css-portfolio/4Lgn8CmcTLixQRBKwzCSQFFrPotJ
-
+https://react-css-portfolio-b2beai6ap-adina142s-projects.vercel.app/
 
 
 ---
