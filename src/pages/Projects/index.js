@@ -8,7 +8,6 @@ import LaunchIcon from '@mui/icons-material/Launch';
 const Projects = () => {
   const { setPageTitle } = usePageTitle();
   
-
   useEffect(() => {
     setPageTitle('Projects - My Portfolio');
   }, [setPageTitle]);
